@@ -9,3 +9,4 @@
 - Ter um botão para iniciar o jogo
 - O mesmo botão para jogar de novo
 - Aparecer um "alert()" falando quem venceu
+- Mostrar embaixo da imagem a escolha do Computador e do Jogador

@@ -1,0 +1,11 @@
+
+.batalha{
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(2, 350px);
+}
+
+.area-jogo img{
+    max-height: 100%;
+    max-width: 100%;
+}
