@@ -7,28 +7,28 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <h1>FLORKENPÔ</h1>
+    <h1 class="titulo">FLORKENPÔ</h1>
     <div class="area-jogo">
-        <button class="btnJogar" id="btnJogar">Começar Jogo</button>
         <div class="batalha">
+            <button class="btn-jogar" id="btn-jogar">Começar Jogo</button>
             <div class="area-player">
                 <input class="input-player" id="nome-player" type="text">
-                <img src="assets/img/interrogacao.jpg" alt="">
-                <h2 class="escolha-player" id="escolha-player"></h2>
-                <button class="salvar" id="salvar">Salvar nome</button>
+                <button class="salvar" id="salvar" onclick="salvarNomePlayer()">Salvar nome</button>
+                <img src="assets/img/interrogacao.jpg" alt="" id="imagem-player">
+                <h3 class="escolha-player" id="escolha-player"></h3>
                 <div class="escolhas-player" id="escolhas-player">
-                    <p>Escolha sua opção:</p>
-                    <button id="1">Pedra</button>
-                    <button id="2">Papel</button>
-                    <button id="3">Tesoura</button>
+                    <h2>Escolha sua opção:</h2>
+                    <button class="bts" id="pedra">Pedra</button>
+                    <button class="bts" id="papel">Papel</button>
+                    <button class="bts" id="tesoura">Tesoura</button>
                 </div>
             </div>
             <div class="area-vs">
-                <img src="assets/img/iamgem-vs.png" alt="">
+                <img src="assets/img/iamgem-versus.png" alt="">
             </div>
             <div class="area-cpu">
-                <img src="assets/img/interrogacao.jpg" alt="">
-                <h2 class="escolha-cpu" id="escolha-cpu"></h2>
+                <img src="assets/img/interrogacao.jpg" alt="" id="imagem-cpu">
+                <h3 class="escolha-cpu" id="escolha-cpu"></h3>
             </div>
         </div>
     </div>
