@@ -162,5 +162,9 @@ document.getElementById('tesoura').addEventListener('click', function() {
 
 botaoComecar.addEventListener('click', function(){
     botaoCome();
+    if(botaoComecar.textContent !== "Jogando"){
+        imagemCpu.src = "assets/img/interrogacao.jpg";
+        imagemPlayer.src = "assets/img/interrogacao.jpg";
+    }
 });
 
