@@ -14,3 +14,4 @@
 - Fazer o computador escolher assim que clicar no botão de começar/recomeçar o jogo e Hora que o jogador clicar no botão aparecer a escolha do computador
 - Após clicar mostrar as escolhas abaixo das imagense
 - Ao clicar no botão "começar jogo" o computador irá escolher sua opção
+- Somar pontos e mostrar quem ganhou

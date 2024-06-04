@@ -21,6 +21,9 @@ let imagemPlayer = document.getElementById("imagem-player");
 let imagemCpu = document.getElementById("imagem-cpu")
 let listaOpcoes = ["Pedra", "Papel", "Tesoura"];
 let informacaoClick = 0;
+let botaoComecar = document.getElementById("btn-jogar");
+let pontosCpu = 0;
+let pontosPlayer = 0;
 
 
 
@@ -85,20 +88,41 @@ function comparacoes(num){
     if(num === 1){
         if(escolhaP === "Pedra" && escolhaC === "Papel"){
             alert("O computador ganhou!");
+            pontosCpu += 1;
         } else if(escolhaP === "Pedra" && escolhaC === "Tesoura"){
             alert(`${nomePlayer.value} ganhou!`);
+            pontosPlayer += 1;
         } else if(escolhaP === "Papel" && escolhaC === "Pedra"){
             alert(`${nomePlayer.value} ganhou!`);
+            pontosPlayer += 1;
         } else if(escolhaP === "Papel" && escolhaC === "Tesoura"){
             alert("O computador ganhou!");
+            pontosCpu += 1;
         } else if(escolhaP === "Tesoura" && escolhaC === "Pedra"){
             alert("O computador ganhou!");
+            pontosCpu += 1;
         } else if(escolhaP === "Tesoura" && escolhaC === "Papel"){
             alert(`${nomePlayer.value} ganhou!`);
+            pontosPlayer += 1;
         } else {
             alert("Empate!");
         }
     }
+}
+
+function definirGanhador(){
+    if(pontosPlayer === 3){
+        alert(`O vencedor da rodada é: ${nomePlayer.value}!`);
+        window.location.reload(true);
+    }
+    else if(pontosCpu === 3){
+        alert(`O vencedor da rodada é: Computador!`);
+        window.location.reload(true);
+    }
+}
+
+function botaoCome(){
+    botaoComecar.textContent = "Jogando";
 }
 
 function rodarFuncoes(){
@@ -107,6 +131,7 @@ function rodarFuncoes(){
     trocarImagemCpu(escolhaCpu);
     textCpu();
     comparacoes(informacaoClick);
+    definirGanhador();
 }
 
 document.getElementById('pedra').addEventListener('click', function() {
@@ -135,4 +160,7 @@ document.getElementById('tesoura').addEventListener('click', function() {
 });
 
 
+botaoComecar.addEventListener('click', function(){
+    botaoCome();
+});
 
